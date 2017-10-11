@@ -11,3 +11,4 @@ npm install
 
 sudo npm run watch
 
+11 october 2017: *Bootstrap4 basic instalation*
