@@ -12,8 +12,13 @@
 
 	{# Set css body classes in bodyClass block #}
 	<body class="{% block bodyClass %}{% endblock %}">
+
+		<div class="container">
+
+			{% block content %}Layout block content{% endblock %}
+			
+		</div>
 		
-		{% block content %}Layout block content{% endblock %}
 		
 	</body>
 </html>

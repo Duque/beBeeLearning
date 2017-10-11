@@ -1,3 +1,13 @@
-* {
-	color: green!important;
-}
+header {
+	padding: $gutter-grid;
+
+	button {
+		@extend .float-right;
+
+		margin-left: $gutter-grid;
+	}
+
+	.logo {
+		width: 100px;
+	}
+} 

@@ -1,8 +1,14 @@
 {# home.njk #}
 {% extends "layout.njk" %}
 
+{% import 'partials/header.njk' as header %}
+
+{% block titleHeader %}{% endblock %}
+
+{% block bodyClass %}{% endblock %}
+
 {% block content %}
 
-  Content
+	{{ header.header() }}
 
 {% endblock %}
