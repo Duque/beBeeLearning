@@ -11,4 +11,13 @@ npm install
 
 sudo npm run watch
 
-11 october 2017: *Bootstrap4 basic instalation*
+11 october 2017: 
+
+- Bootstrap4 implementation
+
+
+# Blocks
+
+titleHeader: 	tittle tag content
+bodyClass:		body tag css classes
+content:			body tag content
