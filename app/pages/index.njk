@@ -1,14 +1,53 @@
-{# home.njk #}
+{# index.njk #}
 {% extends "layout.njk" %}
 
-{% import 'partials/header.njk' as header %}
+{# IMPORTS #}
+{% import 'partials/heading.njk' as heading %}
+{% import 'partials/formationContent.njk' as formationContent %}
+{% import 'partials/teacher.njk' as teacher %}
+{% import 'partials/aditionalFormation.njk' as aditionalFormation %}
 
+{# ADITIONAL BLOCKS #}
 {% block titleHeader %}{% endblock %}
+{% block bodyClass %}{% endblock %} 
 
-{% block bodyClass %}{% endblock %}
 
+{# BLOCK CONTENT #}
 {% block content %}
 
-	{{ header.header() }}
+	{# Heading #}
+	{{ heading.heading() }}
+
+	<div class="container">
+		
+		<div class="row">
+
+			<div class="col-xs-12 col-md-9">
+				
+				{# Formation content #}
+				{{ formationContent.formationContent() }}
+
+				{# Teacher info #}
+				{{ teacher.teacher(type='mobile') }} {# use by css #}
+
+				{# Aditional formations list ¬ ¬ #}
+				{{ aditionalFormation.aditionalFormation(type="mobile") }}
+			</div>
+
+			<div class="col-xs-12 col-md-3"> 
+
+				{# Teacher info #}
+				{{ teacher.teacher(type='desktop') }} {# use by css #}
+
+				{# Aditional formations list ¬ ¬ #}
+				{{ aditionalFormation.aditionalFormation(type="desktop") }}
+
+			</div>
+
+		</div>
+
+		
+
+	</div>
 
 {% endblock %}

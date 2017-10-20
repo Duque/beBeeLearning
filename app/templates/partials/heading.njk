@@ -1,0 +1,19 @@
+{# heading.njk #}
+
+{% macro heading(title='Formation title') %}
+
+	<header class="heading">
+
+		<div class="container">
+			
+			<button class="btn btn-primary float-right d-none d-md-block">Apply for</button>
+		
+			<h1>
+				{{title}}
+			</h1>
+		
+		</div>
+
+	</header>
+
+{% endmacro %}

@@ -1,0 +1,53 @@
+{# aditionalFormation.njk #}
+
+{# Set type equal to 'mobile' or 'desktop' #}
+
+{% macro aditionalFormation(type=null) %}
+
+{% if (type != null) %}
+
+	{% if (type == 'mobile') %}
+
+		<div class="card d-md-none">
+			<div class="card-body">
+
+				<h4 class="light-title">Aditional formation</h4>
+
+				<ul>
+					<li><a href="" title="">Lorem ipsum si</a></li>
+					<li><a href="" title="">Lorem ipsum si</a></li>
+					<li><a href="" title="">Lorem ipsum si</a></li>
+					<li><a href="" title="">Lorem ipsum si</a></li>
+					<li><a href="" title="">Lorem ipsum si</a></li>
+					<li><a href="" title="">Lorem ipsum si</a></li>
+				</ul>
+
+			</div>
+		</div>
+
+	{% elseif (type == 'desktop') %}
+
+		<div class="formation-desktop d-none d-md-block">
+			<h3 class="section-heading">Title here</h3>
+
+			<ul>
+				<li><a href="" title="">Lorem ipsum si</a></li>
+				<li><a href="" title="">Lorem ipsum si</a></li>
+				<li><a href="" title="">Lorem ipsum si</a></li>
+				<li><a href="" title="">Lorem ipsum si</a></li>
+				<li><a href="" title="">Lorem ipsum si</a></li>
+				<li><a href="" title="">Lorem ipsum si</a></li>
+			</ul>
+
+		</div>
+
+	{% endif %}
+
+
+{% else %}
+
+	<span class="text-warning">No type specified</span>
+
+{% endif %}
+
+{% endmacro %}

@@ -1,5 +1,5 @@
-# Easy-Kit-SASS-Nunjuks
-Easy and quick Kit for SASS &amp; Nunjuks
+# Boilerplate for landingpages
+Easy and quick Kit for SASS &amp; Nunjuks &amp; Bootstrap4
 
 *Install:*
 
@@ -11,13 +11,15 @@ npm install
 
 sudo npm run watch
 
+# Blocks
+
+- titleHeader: 	tittle tag content
+- bodyClass:		body tag css classes
+- content:			body tag content
+
+# Updates
+
 11 october 2017: 
 
 - Bootstrap4 implementation
-
-
-# Blocks
-
-titleHeader: 	tittle tag content
-bodyClass:		body tag css classes
-content:			body tag content
+- Simple HTML structure

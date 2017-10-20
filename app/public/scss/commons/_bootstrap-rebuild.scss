@@ -1,0 +1,71 @@
+h1, h2, h3, h4, h5, h6 {
+	text-align:					left;
+}
+
+ul {
+	padding-left:				0px;
+
+	li  {
+		list-style-type:	none;
+		margin-bottom: 		$gutter-grid;
+
+		a {
+			color:					$gray-700;
+		}
+	} 
+}
+
+.btn-primary {
+	font-weight:				600;
+}
+
+.btn-secondary {
+	color:							$white;
+	text-transform:			uppercase;
+	font-weight:				bold;
+	padding-bottom:			1px;
+
+	&:hover {
+		color:						$white;
+	}
+}
+
+.btn-info {
+	border:							1px solid $orange;
+	background-color:		$white;
+	font-size:					14px;
+	font-weight:				600;
+	color:							$orange;
+
+	&:hover {
+		background-color:	$white;
+		color:						$orange;
+	}
+}
+
+.btn-light {
+	font-size:					14px;
+	font-weight:				600;
+	color:							$gray-700;
+
+	&:hover {
+		background-color:	$white;
+	}
+}
+
+.btn-sm {
+	font-size: 					10px;
+}
+
+.btn-block {
+	border-radius:			0px;
+}
+
+.card {
+	margin-bottom:			$gutter-grid * 2;
+	box-shadow:					0 1px 2px rgba(0,0,0,0.16);
+}
+
+.media {
+	margin-bottom:			$gutter-grid / 2;
+}

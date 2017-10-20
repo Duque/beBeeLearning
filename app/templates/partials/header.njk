@@ -1,12 +1,16 @@
+{# header.njk #}
+
 {% macro header() %}
 
-<header>
-	
-	<img src="public/img/bebeelearningv.svg" class="logo">
+	<header class="header">
 
-	<button class="btn btn-secondary">Registrarse</button>
-	<button class="btn btn-light">Login</button>
+		<div class="container">
+			<img src="public/img/bebeelearningv.svg" class="logo">
 
-</header>
+			<button class="btn btn-info">Registrarse</button>
+			<button class="btn btn-light">Login</button>
+		</div>
+
+	</header>
 
 {% endmacro %}

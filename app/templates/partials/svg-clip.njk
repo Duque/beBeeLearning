@@ -1,0 +1,24 @@
+{# This component is optimized for bootstrap 4 #}
+{% macro svgClip(size = 100) %}
+
+	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="{{size}}" height="{{size}}" class="svg_clip">
+		
+		<g>
+			<clipPath id="svgPath">
+				<path class="cls-1" d="M81.784,82.488,56.656,96.994c-5.778,3.333-15.225,3.333-21.027,0L10.5,82.488C4.723,79.155,0,70.955,0,64.29V35.278c0-6.665,4.723-14.865,10.5-18.2L35.629,2.575c5.778-3.333,15.225-3.333,21.027,0L81.784,17.08c5.778,3.333,10.5,11.533,10.5,18.2V64.29C92.285,70.955,87.562,79.155,81.784,82.488Z" width="{{size}}" height="{{size}}" />
+			</clipPath>
+		</g>
+
+		<image clip-path="url(#svgPath)" height="100" width="100" xlink:href="public/img/profile-img-01.jpeg" class="" />
+		
+	</svg>
+
+{% endmacro %}
+
+{# 
+
+{% set size = 100 %} 
+{% import ('partials/svg-clip.njk') as profileCardSvgClip %}
+{{ profileCardSvgClip.svgClip(size) }} 
+
+#}

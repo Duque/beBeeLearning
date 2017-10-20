@@ -1,0 +1,71 @@
+{# teacher.njk #}
+						
+{# Set type equal to 'mobile' or 'desktop' #}
+
+{% macro teacher(type=null) %}
+
+
+	{% if (type != null) %}
+
+		{# IMPORTS #}
+		{% import ('partials/svg-clip.njk') as profileCardSvgClip %}
+		 
+		{% if (type == 'mobile') %}
+
+		{# Bug with svg_clip, solved duplicating svg_clip here. #}
+		<span class="off-screen">{{ profileCardSvgClip.svgClip(size) }}</span> 
+
+			{# mobile visualization #}
+			<article class="card d-md-none"> 
+				<div class="card-body">
+			
+					<div class="media">
+
+						{% set size = 50 %}
+						{{ profileCardSvgClip.svgClip(size) }} 
+
+					  <div class="media-body">
+					    <button class="btn btn-secondary btn-sm float-right">Teacher</button>
+
+					    <h2><strong>Teacher name</strong><br>
+					    	<small>info teacher</small>
+					    </h2>
+
+					  </div>
+					</div>
+					    
+					<p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
+
+				</div>
+			</article>
+
+		{% elseif (type == 'desktop') %}
+
+			{# desktop visualization #}
+			<article class="desktop-teacher d-none d-md-block">
+				
+				<h3 class="section-heading">Title here</h3>
+
+				{% set size = 130 %}
+				{{ profileCardSvgClip.svgClip(size) }} 
+
+				<h2><strong>Teacher name</strong><br>
+		    	<small>info teacher</small>
+		    </h2>
+
+		    <p>
+		    	<button class="btn btn-sm btn-secondary">Teacher</button>
+		    	Cras sit amet nibh libero, in gravida nulla.
+		    </p>
+
+			</article>
+
+		{% endif %}
+
+	{% else %}
+
+		<span class="text-warning">No type specified</span>
+
+	{% endif %}
+
+{% endmacro %}

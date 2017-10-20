@@ -1,13 +1,115 @@
-header {
-	padding: $gutter-grid;
+//HEADER
+.header {
+	padding-top: 			$gutter-grid;
+	padding-bottom: 	$gutter-grid;
+	background-color:	$white;
 
 	button {
 		@extend .float-right;
 
-		margin-left: $gutter-grid;
+		margin-left: 		$gutter-grid;
 	}
 
 	.logo {
-		width: 100px;
+		width: 					100px;
 	}
-} 
+}
+
+
+//HEADING
+.heading {
+	margin-bottom:		$gutter-grid * 2;
+	background-color: #3B3F53;
+	color:						$white;
+	
+	h1 {
+		height:						75px;
+		line-height:			75px;
+	}
+
+	button {
+		margin-top: 			15px;
+	}
+}
+
+
+//CONTENT
+.desktop-card-img-top-correction {
+	//Correcting padding only on mediums and desktop screens
+	@include media-breakpoint-up(md) {
+		$tmp-gtr: 			$gutter-grid * 2;
+		padding: 				$tmp-gtr $tmp-gtr 0px $tmp-gtr;
+	}
+}
+
+.svg_clip {
+	margin-right:			$gutter-grid;
+}
+
+.light-title {
+	margin-bottom:		$gutter-grid;
+	text-transform:		uppercase;
+	color:						$gray-500;
+	font-weight:			600;
+}
+
+.section-heading {
+	margin-bottom:		$gutter-grid * 2;
+	padding-bottom:		$gutter-grid;
+	border-bottom:		3px solid $gray-500;
+	text-transform:		uppercase;
+	color:						$gray-500;
+	font-weight:			600;
+	font-size:				13px;
+}
+
+.desktop-teacher {
+	margin-bottom:		$gutter-grid * 4;
+	text-align:				center;
+
+	h2 {
+		text-align: center;
+
+		small {
+			font-size: 		18px;
+		}
+	}
+}
+
+
+//FOOTER
+footer.footer {
+	height:						75px;
+	line-height:			75px;
+	background-color:	#242E37;
+	color:						$gray-600;
+
+	.logo {
+		margin-right: 	$gutter-grid * 2;
+		margin-bottom:	10px;
+	}
+
+	.slogan {
+
+	}
+
+	.copy {
+		float:					right;
+	}
+
+	.btn.btn-float {
+		position:						fixed;
+		bottom:							0px; 
+		width:							100%;
+		padding-top: 				$gutter-grid * 2;
+		padding-bottom: 		$gutter-grid * 2;
+	}
+}
+
+
+//UTILS
+.off-screen {
+	//Bug with svg_clip
+	position: 				fixed;
+	left:							-20000px;
+}
